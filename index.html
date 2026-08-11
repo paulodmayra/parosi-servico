@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parosi Serviços - Reparos em Serralheria</title>
+    <title>Parosi Serviços - Serralheria & Web</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <script>
@@ -26,88 +26,111 @@
     <style>
         body {
             background-color: #0a0a0a;
-            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-            background-size: 30px 30px;
             color: #ffffff;
             font-family: 'Inter', sans-serif;
         }
-        .bg-overlay {
-            background: linear-gradient(to bottom, rgba(10, 10, 10, 0.4) 0%, rgba(10, 10, 10, 0.95) 100%);
-            min-height: 100vh;
-            width: 100%;
-        }
         .sharp-border {
             border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 0px; /* Geometria Brutalista */
+            border-radius: 0px;
         }
         .glow-text {
             text-shadow: 0 0 15px rgba(255, 107, 0, 0.5);
         }
     </style>
 </head>
-<body class="antialiased relative min-h-screen">
-    
-    <div class="bg-overlay flex items-center justify-center p-4">
+<body class="antialiased min-h-screen flex flex-col bg-charcoal text-white">
+
+    <!-- Divisão Principal de Conteúdo -->
+    <div class="flex-1 flex flex-col lg:flex-row">
         
-        <!-- Cartão Principal -->
-        <div class="w-full max-w-md bg-charcoal/80 backdrop-blur-sm sharp-border p-8 relative overflow-hidden">
-            <!-- Detalhe decorativo (linha lateral) -->
-            <div class="absolute top-0 left-0 w-2 h-full bg-amber"></div>
-
-            <!-- Cabeçalho -->
-            <div class="mb-8">
-                <h2 class="text-amber font-body tracking-[0.2em] text-xs uppercase mb-1">Precisão & Tecnologia</h2>
-                <h1 class="font-display text-6xl leading-none font-bold uppercase mb-2 glow-text">Serralheria <br/>& Web</h1>
-            </div>
-
-            <!-- Lista de Serviços (Layout Assimétrico) -->
-            <div class="space-y-6 mb-10">
-                
-                <div class="sharp-border bg-iron/40 p-4 transform translate-x-2">
-                    <h3 class="text-xl font-display font-semibold text-amber uppercase mb-1">Manutenção Geral</h3>
-                    <p class="text-sm text-gray-300 font-light">Portões, soldas e reparo em geral na área de serralheria, incluindo pequenos reparos.</p>
+        <!-- Lado 1: Serralheria -->
+        <div class="w-full lg:w-1/2 relative flex items-center justify-center p-8 md:p-12 lg:p-16 min-h-[60vh] lg:min-h-0">
+            <!-- Background Image with Overlay -->
+            <div class="absolute inset-0 bg-cover bg-center mix-blend-luminosity opacity-30" style="background-image: url('serralheria_bg.jpg');"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/40 to-transparent lg:bg-gradient-to-r"></div>
+            
+            <div class="relative z-10 w-full max-w-lg">
+                <div class="mb-10">
+                    <h2 class="text-amber font-body tracking-[0.2em] text-xs md:text-sm uppercase mb-2">Forjando Precisão</h2>
+                    <h1 class="font-display text-7xl md:text-8xl leading-none font-bold uppercase glow-text">Serralheria</h1>
                 </div>
 
-                <div class="sharp-border bg-iron/40 p-4 border-l-2 border-l-amber">
-                    <h3 class="text-xl font-display font-semibold text-white uppercase mb-1">Soldas Especiais</h3>
-                    <p class="text-sm text-gray-300 font-light">Solda TIG, Inox e Alumínio. Acabamento perfeito e pequenos reparos.</p>
-                </div>
+                <div class="space-y-6">
+                    <div class="sharp-border bg-iron/60 backdrop-blur-sm p-5 transform translate-x-3 transition-transform hover:translate-x-5">
+                        <h3 class="text-2xl font-display font-semibold text-amber uppercase mb-1">Manutenção Geral</h3>
+                        <p class="text-sm text-gray-300 font-light leading-relaxed">Portões, soldas e reparo em geral na área de serralheria, incluindo pequenos reparos de emergência e reforço estrutural.</p>
+                    </div>
 
-                <div class="sharp-border bg-iron/40 p-4 transform -translate-x-2">
-                    <h3 class="text-xl font-display font-semibold text-white uppercase mb-1">Toldos e Fachadas</h3>
-                    <p class="text-sm text-gray-300 font-light">Fabricação de toldos de policarbonato, totens, letras caixa em zinco (com ou sem iluminação) e fachadas em lona ou ACM.</p>
-                </div>
+                    <div class="sharp-border bg-iron/60 backdrop-blur-sm p-5 border-l-2 border-l-amber transition-all hover:bg-iron/80 hover:border-l-4">
+                        <h3 class="text-2xl font-display font-semibold text-white uppercase mb-1">Soldas Especiais</h3>
+                        <p class="text-sm text-gray-300 font-light leading-relaxed">Solda TIG, Inox e Alumínio. Acabamento perfeito, resistente à oxidação, ideal para projetos que exigem estética e durabilidade.</p>
+                    </div>
 
-                <div class="sharp-border bg-iron/40 p-4 border-l-2 border-l-amber transform translate-x-2">
-                    <h3 class="text-xl font-display font-semibold text-white uppercase mb-1">Automação Web</h3>
-                    <p class="text-sm text-gray-300 font-light">Desenvolvimento de soluções web, ecossistemas autônomos, integrações de inteligência artificial e páginas de alta conversão.</p>
-                </div>
-
-            </div>
-
-            <!-- Rodapé / Contato -->
-            <div class="pt-6 border-t border-gray-800">
-                <div class="mb-4">
-                    <p class="font-display text-3xl uppercase tracking-wider">Parosi Serviço</p>
-                    <p class="text-xs text-gray-400 font-light uppercase tracking-widest mb-3">Paulo Roberto Silva</p>
-                    <div class="flex items-start text-xs text-gray-300 font-light">
-                        <svg class="w-4 h-4 text-amber mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                        <p>Rua Prof. Moacir Moreira César, 300<br>Jd. dos Coqueiros, São Carlos - SP</p>
+                    <div class="sharp-border bg-iron/60 backdrop-blur-sm p-5 transform -translate-x-3 transition-transform hover:-translate-x-5">
+                        <h3 class="text-2xl font-display font-semibold text-white uppercase mb-1">Toldos e Fachadas</h3>
+                        <p class="text-sm text-gray-300 font-light leading-relaxed">Fabricação de toldos de policarbonato, totens, letras caixa em zinco (iluminadas ou não) e comunicação visual em ACM e lona.</p>
                     </div>
                 </div>
-                
-                <div class="space-y-3">
-                    <a href="https://instagram.com/paulodmayram" target="_blank" class="block w-full text-center border border-gray-500 text-gray-300 font-display font-bold text-2xl py-2 hover:bg-gray-800 hover:text-white transition-colors duration-300 sharp-border cursor-pointer">
-                        INSTAGRAM: @paulodmayram
-                    </a>
-                    
-                    <a href="https://wa.me/5516988757849" target="_blank" class="block w-full text-center bg-amber text-black font-display font-bold text-3xl py-3 hover:bg-white hover:text-charcoal transition-colors duration-300 sharp-border cursor-pointer">
-                        WHATSAPP: (16) 98875-7849
-                    </a>
+            </div>
+        </div>
+
+        <!-- Lado 2: Automação Web -->
+        <div class="w-full lg:w-1/2 relative flex items-center justify-center p-8 md:p-12 lg:p-16 border-t lg:border-t-0 lg:border-l border-white/5 min-h-[60vh] lg:min-h-0">
+            <!-- Background Image with Overlay -->
+            <div class="absolute inset-0 bg-cover bg-center mix-blend-luminosity opacity-30" style="background-image: url('web_dev_bg.png');"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/40 to-transparent lg:bg-gradient-to-l"></div>
+            
+            <div class="relative z-10 w-full max-w-lg">
+                <div class="mb-10 lg:text-right">
+                    <h2 class="text-amber font-body tracking-[0.2em] text-xs md:text-sm uppercase mb-2">Evolução Digital</h2>
+                    <h1 class="font-display text-7xl md:text-8xl leading-none font-bold uppercase glow-text">Automação Web</h1>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="sharp-border bg-iron/60 backdrop-blur-sm p-5 transform -translate-x-3 lg:translate-x-0 lg:-translate-x-3 transition-transform hover:-translate-x-5">
+                        <h3 class="text-2xl font-display font-semibold text-amber uppercase mb-1">Soluções Customizadas</h3>
+                        <p class="text-sm text-gray-300 font-light leading-relaxed">Desenvolvimento de sistemas web sob medida (SaaS) focados em resolver gargalos, automatizar rotinas e otimizar processos logísticos e de atendimento.</p>
+                    </div>
+
+                    <div class="sharp-border bg-iron/60 backdrop-blur-sm p-5 border-r-0 lg:border-r-2 lg:border-l-0 border-l-2 border-amber transition-all hover:bg-iron/80 lg:text-right">
+                        <h3 class="text-2xl font-display font-semibold text-white uppercase mb-1">Landing Pages</h3>
+                        <p class="text-sm text-gray-300 font-light leading-relaxed">Criação de páginas de alta performance e alto impacto visual. Design premium, técnicas de UX avançadas e copy voltada para maximizar a conversão (CRO).</p>
+                    </div>
+
+                    <div class="sharp-border bg-iron/60 backdrop-blur-sm p-5 transform translate-x-3 transition-transform hover:translate-x-5 lg:text-right">
+                        <h3 class="text-2xl font-display font-semibold text-white uppercase mb-1">Agentes de I.A.</h3>
+                        <p class="text-sm text-gray-300 font-light leading-relaxed">Implementação de ecossistemas de agentes autônomos para escalar operações. Robôs cognitivos para SDR (Vendas B2B), atendimento e análise de dados em tempo real.</p>
+                    </div>
                 </div>
             </div>
+        </div>
 
+    </div>
+
+    <!-- Rodapé Global -->
+    <div class="bg-[#050505] border-t border-white/5 relative z-20">
+        <div class="max-w-7xl mx-auto p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-8">
+            <!-- Informações -->
+            <div class="text-center md:text-left flex-1">
+                <p class="font-display text-4xl uppercase tracking-wider text-amber glow-text mb-1">Parosi Serviço</p>
+                <p class="text-sm text-gray-400 font-body uppercase tracking-[0.3em] mb-4">Paulo Roberto Silva</p>
+                <div class="flex items-start justify-center md:justify-start text-xs text-gray-300 font-light">
+                    <svg class="w-4 h-4 text-amber mr-2 mt-0 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <p class="text-left">Rua Prof. Moacir Moreira César, 300<br>Jd. dos Coqueiros, São Carlos - SP</p>
+                </div>
+            </div>
+            
+            <!-- Botões -->
+            <div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+                <a href="https://instagram.com/paulodmayram" target="_blank" class="flex-1 min-w-[200px] text-center border border-gray-600 text-gray-300 font-display font-bold tracking-widest text-xl py-3 px-8 hover:bg-gray-800 hover:text-white transition-all duration-300 sharp-border hover:shadow-[0_0_15px_rgba(255,255,255,0.1)]">
+                    INSTAGRAM
+                </a>
+                <a href="https://wa.me/5516988757849" target="_blank" class="flex-1 min-w-[200px] text-center bg-amber text-charcoal font-display font-bold tracking-widest text-xl py-3 px-8 hover:bg-white transition-all duration-300 sharp-border hover:shadow-[0_0_20px_rgba(255,107,0,0.4)]">
+                    WHATSAPP
+                </a>
+            </div>
         </div>
     </div>
+
 </body>
 </html>

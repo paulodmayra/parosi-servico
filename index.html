@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parosi Serviços - Reparos em Serralheria</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        amber: '#FF6B00',
+                        charcoal: '#0a0a0a',
+                        iron: '#2a2a2a'
+                    },
+                    fontFamily: {
+                        display: ['Teko', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+        }
+        .bg-overlay {
+            background: linear-gradient(to bottom, rgba(10, 10, 10, 0.4) 0%, rgba(10, 10, 10, 0.95) 100%);
+            min-height: 100vh;
+            width: 100%;
+        }
+        .sharp-border {
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 0px; /* Geometria Brutalista */
+        }
+        .glow-text {
+            text-shadow: 0 0 15px rgba(255, 107, 0, 0.5);
+        }
+    </style>
+</head>
+<body class="antialiased relative min-h-screen">
+    <!-- Vídeo de Fundo do Instagram -->
+    <video autoplay loop muted playsinline class="fixed top-0 left-0 min-w-full min-h-full w-auto h-auto object-cover -z-10 opacity-60">
+        <source src="parosi_instagram_post.mp4" type="video/mp4">
+    </video>
+    
+    <div class="bg-overlay flex items-center justify-center p-4">
+        
+        <!-- Cartão Principal -->
+        <div class="w-full max-w-md bg-charcoal/80 backdrop-blur-sm sharp-border p-8 relative overflow-hidden">
+            <!-- Detalhe decorativo (linha lateral) -->
+            <div class="absolute top-0 left-0 w-2 h-full bg-amber"></div>
+
+            <!-- Cabeçalho -->
+            <div class="mb-8">
+                <h2 class="text-amber font-body tracking-[0.2em] text-xs uppercase mb-1">Forjando Precisão</h2>
+                <h1 class="font-display text-6xl leading-none font-bold uppercase mb-2 glow-text">Reparos em <br/>Serralheria</h1>
+            </div>
+
+            <!-- Lista de Serviços (Layout Assimétrico) -->
+            <div class="space-y-6 mb-10">
+                
+                <div class="sharp-border bg-iron/40 p-4 transform translate-x-2">
+                    <h3 class="text-xl font-display font-semibold text-amber uppercase mb-1">Manutenção Geral</h3>
+                    <p class="text-sm text-gray-300 font-light">Portões, soldas e reparo em geral na área de serralheria, incluindo pequenos reparos.</p>
+                </div>
+
+                <div class="sharp-border bg-iron/40 p-4 border-l-2 border-l-amber">
+                    <h3 class="text-xl font-display font-semibold text-white uppercase mb-1">Soldas Especiais</h3>
+                    <p class="text-sm text-gray-300 font-light">Solda TIG, Inox e Alumínio. Acabamento perfeito e pequenos reparos.</p>
+                </div>
+
+                <div class="sharp-border bg-iron/40 p-4 transform -translate-x-2">
+                    <h3 class="text-xl font-display font-semibold text-white uppercase mb-1">Toldos e Fachadas</h3>
+                    <p class="text-sm text-gray-300 font-light">Fabricação de toldos de policarbonato, totens, letras caixa em zinco (com ou sem iluminação) e fachadas em lona ou ACM.</p>
+                </div>
+
+            </div>
+
+            <!-- Rodapé / Contato -->
+            <div class="pt-6 border-t border-gray-800">
+                <div class="mb-4">
+                    <p class="font-display text-3xl uppercase tracking-wider">Parosi Serviço</p>
+                    <p class="text-xs text-gray-400 font-light uppercase tracking-widest mb-3">Paulo Roberto Silva</p>
+                    <div class="flex items-start text-xs text-gray-300 font-light">
+                        <svg class="w-4 h-4 text-amber mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <p>Rua Prof. Moacir Moreira César, 300<br>Jd. dos Coqueiros, São Carlos - SP</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-3">
+                    <a href="https://instagram.com/paulodmayram" target="_blank" class="block w-full text-center border border-gray-500 text-gray-300 font-display font-bold text-2xl py-2 hover:bg-gray-800 hover:text-white transition-colors duration-300 sharp-border cursor-pointer">
+                        INSTAGRAM: @paulodmayram
+                    </a>
+                    
+                    <a href="https://wa.me/5516988757849" target="_blank" class="block w-full text-center bg-amber text-black font-display font-bold text-3xl py-3 hover:bg-white hover:text-charcoal transition-colors duration-300 sharp-border cursor-pointer">
+                        WHATSAPP: (16) 98875-7849
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

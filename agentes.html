@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentes de IA - Parosi Serviços</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        amber: '#FF6B00',
+                        charcoal: '#0a0a0a',
+                        iron: '#2a2a2a'
+                    },
+                    fontFamily: {
+                        display: ['Teko', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            background-image: url('web_dev_bg.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(10, 10, 10, 0.85); /* Escurecendo o fundo para leitura */
+            z-index: -1;
+        }
+        .sharp-border {
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 0px;
+        }
+        .glow-text {
+            text-shadow: 0 0 15px rgba(255, 107, 0, 0.5);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col text-white relative">
+    <div class="bg-overlay"></div>
+    
+    <!-- Header / Voltar -->
+    <div class="p-6 md:p-8 w-full max-w-7xl mx-auto flex justify-between items-center z-20 border-b border-white/5">
+        <h2 class="text-amber font-body tracking-[0.2em] text-xs uppercase">Ecossistema Autônomo</h2>
+        <a href="index.html" class="flex items-center text-gray-300 hover:text-amber transition-colors text-xs md:text-sm uppercase tracking-wider font-semibold group border border-white/10 px-4 py-2 hover:border-amber bg-iron/50 backdrop-blur-sm">
+            <svg class="w-4 h-4 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            Voltar para Início
+        </a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 w-full max-w-7xl mx-auto p-6 md:p-8 z-10">
+        <div class="mb-12">
+            <h1 class="font-display text-5xl md:text-7xl leading-none font-bold uppercase glow-text">Agentes de Inteligência Artificial</h1>
+            <p class="mt-4 text-gray-300 font-light max-w-2xl text-sm md:text-base leading-relaxed">Nossos robôs cognitivos operam de forma autônoma 24/7 para escalar suas operações corporativas. Conheça as principais frentes de atuação da nossa infraestrutura de IA.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+            <!-- Agente 1 -->
+            <div class="sharp-border bg-iron/80 backdrop-blur-md p-6 hover:bg-black/60 transition-colors border-t-2 border-t-amber group">
+                <h3 class="text-2xl font-display font-semibold text-white uppercase mb-2 group-hover:text-amber transition-colors">SDR Agent (Vendas B2B)</h3>
+                <p class="text-sm text-gray-300 font-light leading-relaxed">Qualificação de leads inbound e prospecção ativa B2B. O agente interage com potenciais clientes, faz perguntas-chave baseadas no seu funil e agenda reuniões automaticamente direto no calendário da sua equipe de vendas.</p>
+            </div>
+
+            <!-- Agente 2 -->
+            <div class="sharp-border bg-iron/80 backdrop-blur-md p-6 hover:bg-black/60 transition-colors border-t-2 border-t-white group hover:border-t-amber">
+                <h3 class="text-2xl font-display font-semibold text-white uppercase mb-2 group-hover:text-amber transition-colors">CS Retention (Suporte & Retenção)</h3>
+                <p class="text-sm text-gray-300 font-light leading-relaxed">Atendimento ao cliente nível 1 e 2. Baseado no conhecimento exclusivo da sua empresa (RAG), o agente resolve problemas comuns, responde dúvidas técnicas complexas e atua ativamente para reter pedidos de cancelamento (Churn).</p>
+            </div>
+
+            <!-- Agente 3 -->
+            <div class="sharp-border bg-iron/80 backdrop-blur-md p-6 hover:bg-black/60 transition-colors border-t-2 border-t-white group hover:border-t-amber">
+                <h3 class="text-2xl font-display font-semibold text-white uppercase mb-2 group-hover:text-amber transition-colors">Auditor & Compliance</h3>
+                <p class="text-sm text-gray-300 font-light leading-relaxed">Agente focado em analisar contratos, cruzar dados fiscais ou verificar processos internos em tempo real. Ele garante que as operações estejam estritamente dentro das normas estabelecidas, emitindo alertas imediatos sobre desvios.</p>
+            </div>
+            
+            <!-- Agente 4 -->
+            <div class="sharp-border bg-iron/80 backdrop-blur-md p-6 hover:bg-black/60 transition-colors border-t-2 border-t-white group hover:border-t-amber">
+                <h3 class="text-2xl font-display font-semibold text-white uppercase mb-2 group-hover:text-amber transition-colors">Growth & Data Analytics</h3>
+                <p class="text-sm text-gray-300 font-light leading-relaxed">Monitoramento contínuo de KPIs. O agente cruza dados de plataformas de marketing e CRM para apontar oportunidades ocultas de escala, otimizar orçamentos de campanhas e gerar relatórios executivos sob demanda.</p>
+            </div>
+        </div>
+        
+        <div class="mt-12 text-center p-6 border border-white/10 bg-black/40 backdrop-blur-sm">
+            <h3 class="text-xl font-display text-white uppercase mb-2">Interessado em escalar com Automação?</h3>
+            <p class="text-sm text-gray-400 mb-4">Entre em contato para discutirmos a arquitetura ideal para o seu negócio.</p>
+            <a href="https://wa.me/5516988757849" target="_blank" class="inline-block bg-amber text-black font-semibold uppercase text-sm px-8 py-3 hover:bg-white transition-colors duration-300">Falar no WhatsApp</a>
+        </div>
+    </div>
+</body>
+</html>
